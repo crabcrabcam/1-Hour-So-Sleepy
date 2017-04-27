@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://Scripts/QuitButton.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 443.0
+margin/top = 160.0
+margin/right = 682.0
+margin/bottom = 224.0
+text = "You Lose!"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 387.0
+margin/top = 329.0
+margin/right = 739.0
+margin/bottom = 508.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "You Lose: Quit!"
+flat = false
+script/script = ExtResource( 1 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+
+

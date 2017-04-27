@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://Scripts/QuitButton.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+size_flags/stretch_ratio = 128.0
+margin/left = 407.0
+margin/top = 122.0
+margin/right = 793.0
+margin/bottom = 235.0
+text = "You Win!"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 329.0
+margin/top = 389.0
+margin/right = 603.0
+margin/bottom = 494.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "You Win: Quit!"
+flat = false
+script/script = ExtResource( 1 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+
+
